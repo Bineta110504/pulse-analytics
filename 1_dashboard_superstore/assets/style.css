@@ -1,0 +1,192 @@
+/* =======================================================
+   POLICE & RESET
+======================================================= */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: #F4F6FB;
+    color: #1E293B;
+}
+
+.app-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =======================================================
+   SIDEBAR
+======================================================= */
+
+.sidebar {
+    width: 270px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #0B1C39 0%, #142850 100%);
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.logo-wrap { margin-bottom: 34px; padding-left: 2px; }
+.logo-img { height: 34px; }
+
+.sidebar-section-title {
+    color: #7C89AD;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+}
+
+.filtre-item { margin-bottom: 16px; }
+
+.filtre-label {
+    display: block;
+    color: #C4CDE3;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.filtre-dropdown .Select-control,
+.filtre-dropdown .dash-dropdown .Select-control {
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-radius: 8px !important;
+}
+
+.filtre-dropdown .Select-value-label,
+.filtre-dropdown .Select-placeholder,
+.filtre-dropdown input { color: #FFFFFF !important; }
+
+.filtre-dropdown .Select-menu-outer { color: #0B1C39; border-radius: 8px; overflow: hidden; }
+
+.sidebar-datasource {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: rgba(244,180,0,0.1);
+    border: 1px solid rgba(244,180,0,0.3);
+    border-radius: 8px;
+    color: #F4B400;
+    font-size: 11.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar-author { color: #FFFFFF; font-size: 13px; font-weight: 600; }
+.sidebar-author-sub { color: #7C89AD; font-size: 11px; margin-top: 2px; }
+
+/* =======================================================
+   CONTENU PRINCIPAL
+======================================================= */
+
+.contenu-principal {
+    flex: 1;
+    padding: 32px 40px 20px;
+    min-width: 0;
+}
+
+.topbar { margin-bottom: 26px; }
+.page-titre { font-size: 26px; font-weight: 800; color: #0B1C39; letter-spacing: -0.3px; }
+.page-soustitre { font-size: 14px; color: #64748B; margin-top: 4px; }
+
+/* =======================================================
+   KPI CARDS
+======================================================= */
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.kpi-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 18px rgba(15,23,42,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(15,23,42,0.1); }
+
+.kpi-icon-wrap {
+    width: 46px; height: 46px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 18px;
+    flex-shrink: 0;
+}
+
+.kpi-titre { font-size: 12.5px; color: #64748B; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; }
+.kpi-valeur { font-size: 24px; font-weight: 800; color: #0B1C39; margin: 3px 0; line-height: 1; }
+.kpi-sous-valeur { font-size: 12px; color: #94A3B8; }
+
+/* =======================================================
+   GRILLE DE GRAPHIQUES
+======================================================= */
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 14px 18px 6px;
+    box-shadow: 0 4px 18px rgba(15,23,42,0.06);
+}
+
+.graph-card.span-2 { grid-column: span 1; }
+.graph-card.full { grid-column: 1 / -1; }
+
+/* =======================================================
+   FOOTER
+======================================================= */
+
+.footer {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 12px;
+    padding: 24px 0 10px;
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width: 1200px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+    .app-shell { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; position: static; flex-direction: row; flex-wrap: wrap; align-items: center; }
+    .sidebar-footer { display: none; }
+    .contenu-principal { padding: 20px; }
+}
+
+@media (max-width: 560px) {
+    .kpi-grid { grid-template-columns: 1fr; }
+}

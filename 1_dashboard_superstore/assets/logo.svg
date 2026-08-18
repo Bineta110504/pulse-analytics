@@ -1,0 +1,13 @@
+<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="18" width="6" height="14" rx="1.5" fill="url(#logoGrad)"/>
+  <rect x="9" y="10" width="6" height="22" rx="1.5" fill="url(#logoGrad)"/>
+  <rect x="18" y="2" width="6" height="30" rx="1.5" fill="#F4B400"/>
+  <text x="32" y="17" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">PULSE</text>
+  <text x="32" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="10" font-weight="400" fill="#9CA9C7" letter-spacing="2">ANALYTICS</text>
+</svg>
